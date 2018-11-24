@@ -1,6 +1,6 @@
 <template>
   <div class="post-listing">
-    <article class="post-summary" v-for="post in $static.allPost.edges" :key="post.node._id">
+    <article class="post-summary" v-for="post in posts" :key="post.node._id">
       <h2>{{post.node.title}}</h2>
       <span class="post-summary__date">{{toDateString(post.node.date)}}</span>
       <p>
@@ -11,23 +11,13 @@
   </div>
 </template>
 
-<static-query>
-  query Posts {
-    allPost {
-      edges {
-        node {
-          _id
-          title
-          content 
-          date
-        }
-      }
-    }
-  }
-</static-query>
-
 <script>
+import { Pager } from 'gridsome'
+
 export default {
+  props: {
+    posts: Array
+  },
   methods: {
     toDateString(date) {
       let options = {
@@ -43,8 +33,6 @@ export default {
   }
 }
 </script>
-
-
 
 <style lang="scss">
 .post-listing {
