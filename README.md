@@ -1,1 +1,0 @@
-# Default starter for Gridsome

@@ -61,4 +61,16 @@ hr {
 .nav__link {
   margin-left: 20px;
 }
+
+.pagination {
+  &__link-newer,
+  &__link-older {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+
+  &__link-older {
+    float: right;
+  }
+}
 </style>

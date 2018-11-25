@@ -5,15 +5,13 @@
       <span class="post-summary__date">{{toDateString(post.node.date)}}</span>
       <p>
         <span v-html="summary(post.node.content)"></span>
-        <a href="#" class="post-summary__more">[Read More]</a>
+        <g-link :to="post.node.path" class="post-summary__more">[Read More]</g-link>
       </p>
     </article>
   </div>
 </template>
 
 <script>
-import { Pager } from 'gridsome'
-
 export default {
   props: {
     posts: Array

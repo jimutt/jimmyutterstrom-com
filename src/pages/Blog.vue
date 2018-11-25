@@ -1,16 +1,24 @@
 <template>
   <Layout>
     <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
-    <h1>Latest posts</h1>
+    <h1>Posts</h1>
     <hr>
     <PostListing :posts="$page.allPost.edges"/>
-    <g-link class="pagination__link-older" to="/blog/2">Older posts →</g-link>
+    <CustomPager
+      :info="$page.allPost.pageInfo"
+      :showLinks="true"
+      :showNavigation="true"
+      prevLabel="← Newer posts"
+      prevClass="pagination__link-newer"
+      nextLabel="Older posts →"
+      nextClass="pagination__link-older"
+    />
   </Layout>
 </template>
 
 <page-query>
-  query Posts {
-    allPost (perPage: 2, page: 1) {
+  query Posts ($page: Int) {
+    allPost (perPage: 2, page: $page) @paginate {
       pageInfo {
         totalPages
         currentPage
@@ -30,11 +38,15 @@
 
 <script>
 import PostListing from '~/components/PostListing'
+import CustomPager from '~/components/CustomPager'
 
 export default {
   components: {
+    CustomPager,
     PostListing
   }
 }
 </script>
 
+<style lang="scss">
+</style>
