@@ -2,7 +2,7 @@
   <div class="post-listing">
     <article class="post-summary" v-for="post in posts" :key="post.node._id">
       <h2>{{post.node.title}}</h2>
-      <span class="post-summary__date">{{toDateString(post.node.date)}}</span>
+      <span class="post-summary__date">{{toDateString(post.node.publishedDate)}}</span>
       <p>
         <span v-html="summary(post.node.content)"></span>
         <g-link :to="post.node.path" class="post-summary__more">[Read More]</g-link>
@@ -19,17 +19,17 @@ export default {
   methods: {
     toDateString(date) {
       let options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      }
-      return new Date(date).toLocaleString('en-us', options)
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      };
+      return new Date(date).toLocaleString("en-us", options);
     },
     summary(postContent) {
-      return postContent.replace(/<(?:.|\n)*?>/gm, '').substring(0, 280) + ' '
+      return postContent.replace(/<(?:.|\n)*?>/gm, "").substring(0, 280) + " ";
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

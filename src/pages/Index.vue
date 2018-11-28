@@ -10,7 +10,7 @@
 
 <page-query>
   query Posts {
-    allPost (perPage: 2, page: 1) {
+    allPost (perPage: 10, page: 1, sortBy: "publishedDate", order: DESC) {
       pageInfo {
         totalPages
         currentPage
@@ -20,7 +20,7 @@
           _id
           title
           content 
-          date
+          publishedDate
           path
         }
       }
@@ -29,12 +29,12 @@
 </page-query>
 
 <script>
-import PostListing from '~/components/PostListing'
+import PostListing from "~/components/PostListing";
 
 export default {
   components: {
     PostListing
   }
-}
+};
 </script>
 
