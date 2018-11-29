@@ -4,6 +4,7 @@
       <strong>Jimmy Utterström</strong>
       <nav class="nav">
         <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
+        <g-link class="nav__link" :to="{name: 'blog' }">Blog</g-link>
         <g-link class="nav__link" :to="{ name: 'about' }">About</g-link>
       </nav>
     </header>
@@ -13,14 +14,22 @@
 
 <style lang="scss">
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  background-color: #f8f8f8;
+  background-color: rgba(#f4f6f9, 0.2);
   color: #323233;
   font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #383423;
 }
 
 h1 {
@@ -30,6 +39,7 @@ h1 {
 a {
   text-decoration: none;
   color: #5171a5;
+  transition: all 0.15s ease-in;
 
   &:hover {
     color: #7b9cd1;
@@ -48,6 +58,7 @@ hr {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 150px;
 }
 
 .header {
@@ -59,7 +70,13 @@ hr {
 }
 
 .nav__link {
-  margin-left: 20px;
+  margin-left: 30px;
+  color: #56442d;
+  font-weight: bold;
+
+  &:hover {
+    color: #998977;
+  }
 }
 
 .pagination {
@@ -67,6 +84,11 @@ hr {
   &__link-older {
     font-size: 1.1rem;
     padding: 5px;
+    color: #56442d;
+
+    &:hover {
+      color: #998977;
+    }
   }
 
   &__link-older {

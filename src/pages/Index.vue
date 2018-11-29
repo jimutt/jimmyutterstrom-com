@@ -1,16 +1,22 @@
 <template>
   <Layout>
-    <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
-    <h1>Latest posts</h1>
-    <hr>
+    <div class="author-intro">
+      <g-image src="~/images/jimmy.jpg" :immediate="true"/>
+      <p>Welcome to the personal site of a Swedish software developer with a passion for singing, web development and embedded systems!</p>
+      <p>
+        Scroll down to read my latest blog posts or
+        <a href="#">click here</a> for more information about me.
+      </p>
+    </div>
+    <h1>Blog</h1>
     <PostListing :posts="$page.allPost.edges"/>
     <g-link class="pagination__link-older" to="/blog/2">Older posts →</g-link>
   </Layout>
 </template>
 
 <page-query>
-  query Posts {
-    allPost (perPage: 10, page: 1, sortBy: "publishedDate", order: DESC) {
+  query Posts ($page: Int) {
+    allPost (perPage: 5, page: $page, sortBy: "publishedDate") @paginate {
       pageInfo {
         totalPages
         currentPage
@@ -37,4 +43,34 @@ export default {
   }
 };
 </script>
+
+<style scoped lang="scss">
+.author-intro {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  p {
+    max-width: 500px;
+  }
+
+  img {
+    position: relative;
+    border-radius: 50%;
+    min-width: 150px;
+    min-height: 150px;
+    width: 25vw;
+    height: 25vw;
+    max-width: 250px;
+    max-height: 250px;
+    background: white;
+
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;
+  }
+}
+</style>
+
 

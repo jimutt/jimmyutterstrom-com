@@ -23,11 +23,11 @@ export default {
   methods: {
     toDateString(date) {
       let options = {
-        year: "numeric",
-        month: "long",
-        day: "numeric"
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
       };
-      return new Date(date).toLocaleString("en-us", options);
+      return new Date(date).toLocaleString('en-us', options);
     }
   },
   metaInfo() {
@@ -37,3 +37,11 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+.post {
+  img {
+    max-width: 100%;
+  }
+}
+</style>

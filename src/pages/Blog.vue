@@ -1,8 +1,7 @@
 <template>
   <Layout>
     <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
-    <h1>Posts</h1>
-    <hr>
+    <h1>Blog</h1>
     <PostListing :posts="$page.allPost.edges"/>
     <CustomPager
       :info="$page.allPost.pageInfo"
@@ -18,7 +17,7 @@
 
 <page-query>
   query Posts ($page: Int) {
-    allPost (perPage: 2, page: $page) @paginate {
+    allPost (perPage: 5, page: $page) @paginate {
       pageInfo {
         totalPages
         currentPage
@@ -28,7 +27,7 @@
           _id
           title
           content 
-          date
+          publishedDate
           path
         }
       }
@@ -37,15 +36,15 @@
 </page-query>
 
 <script>
-import PostListing from '~/components/PostListing'
-import CustomPager from '~/components/CustomPager'
+import PostListing from "~/components/PostListing";
+import CustomPager from "~/components/CustomPager";
 
 export default {
   components: {
     CustomPager,
     PostListing
   }
-}
+};
 </script>
 
 <style lang="scss">
