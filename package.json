@@ -9,7 +9,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "gridsome": "^0.3.4",
+    "gridsome": "^0.3.5",
     "snyk": "^1.110.2"
   },
   "devDependencies": {

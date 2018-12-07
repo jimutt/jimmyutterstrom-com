@@ -9,6 +9,9 @@
       </p>
     </div>
     <h1>Blog</h1>
+    <p
+      class="blog-disclaimer"
+    >Ever since I started working there haven't been much activity around here unfortunately... But who knows, one day that might change!</p>
     <PostListing :posts="$page.allPost.edges"/>
     <g-link class="pagination__link-older" to="/blog/2">Older posts →</g-link>
   </Layout>
@@ -16,7 +19,7 @@
 
 <page-query>
   query Posts ($page: Int) {
-    allPost (perPage: 5, page: $page, sortBy: "publishedDate") @paginate {
+    allPost (perPage: 5, page: $page, sortBy: "publishedDate", order: DESC) @paginate {
       pageInfo {
         totalPages
         currentPage
@@ -70,6 +73,12 @@ export default {
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
       0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;
   }
+}
+
+.blog-disclaimer {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
 }
 </style>
 
