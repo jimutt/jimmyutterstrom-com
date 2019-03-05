@@ -2,7 +2,7 @@
 title: More PSoC 5LP boards on the way!
 slug: more-psoc5-boards-on-the-way
 status: published
-publishedDate: '2015-07-06T15:28:43.000Z'
+date: '2015-07-06T15:28:43.000Z'
 metaDescription: null
 metaTitle: null
 ---

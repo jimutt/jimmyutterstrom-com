@@ -2,7 +2,7 @@
 title: NavBox - A Router and some waypoints!
 slug: navbox-a-router-and-some-waypoints
 status: published
-publishedDate: '2015-08-12T12:04:31.000Z'
+date: '2015-08-12T12:04:31.000Z'
 metaDescription: null
 metaTitle: null
 ---
@@ -19,7 +19,6 @@ There’s still a lot of work to be done on all parts of the application but at 
 
 When the waypoint system is implemented I will soon need to get the vehicle that will be using the system. I can of course test the basic navigation functionality manually by driving or walking with the system but to design and test the propulsioncontrol it would be nice to have the vehicle that the system is intended to control. I will most likely choose to use a standard RC boat, at least for the first prototype.
 
-Here is a small video clip where I’m demonstrating the app in its current state:  
+Here is a small video clip where I’m demonstrating the app in its current state:
+
 <iframe allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/NxhcPn7nkUY" width="420"></iframe>
-
-

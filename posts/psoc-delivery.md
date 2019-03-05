@@ -2,7 +2,7 @@
 title: PSoC Delivery!
 slug: psoc-delivery
 status: published
-publishedDate: '2015-07-15T13:00:23.000Z'
+date: '2015-07-15T13:00:23.000Z'
 metaDescription: null
 metaTitle: null
 ---
@@ -14,5 +14,3 @@ The downside with larger prototyping boards like FreeSoC2 or the PSoC4 Pioneer b
 ![](http://di2hdke024x80.cloudfront.net/images/psocDelivery.jpg)
 
 I’ll probably write a new post when I’ve had the chance to test them!
-
-

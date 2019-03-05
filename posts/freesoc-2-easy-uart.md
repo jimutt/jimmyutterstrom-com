@@ -2,14 +2,14 @@
 title: FreeSoC 2 - Easy UART
 slug: freesoc-2-easy-uart
 status: published
-publishedDate: '2015-07-06T18:41:59.000Z'
+date: '2015-07-06T18:41:59.000Z'
 metaDescription: null
 metaTitle: null
 ---
 
 If you’re starting out with the FreeSoc 2 and you’re ready to leave the world of blinking LEDs to start working on more advanced projects you will quite often need to output data from the board to the computer for debug purposesor you’ll maybe want to send instructions to the PSoC boardfrom your PC.
 
-There are actually more than one way of doing this. Either you can implement the serial communication functionality by using the “USBUART” component in PSoC Creator or you could use a standard UART-module. For most projects it doesn’t matter thatmuch which one you choose. But if you go with the “USBUART” component you will need to change some internal clock settings on the FreeSoC board as well as you’ll need to make sure you’re using the right signal levels. Therefore I think that the easiest and most straight-forward way for someone who is very new to PSoC is to use the standard UART component and as you will most likely use itin future projects it will probably be goodto know how it works.
+There are actually more than one way of doing this. Either you can implement the serial communication functionality by using the “USBUART” component in PSoC Creator or you could use a standard UART-module. For most projects it doesn’t matter thatmuch which one you choose. But if you go with the “USBUART” component you will need to change some internal clock settings on the FreeSoC board as well as you’ll need to make sure you’re using the right signal levels. Therefore I think that the easiest and most straight-forward way for someone who is very new to PSoC is to use the standard UART component and as you will most likely use itin future projects it will probably be good to know how it works.
 
 In this tutorial you will learn how to create a simple application for the FreeSoC2 board which echoes serial input from a PC back to the computer.
 

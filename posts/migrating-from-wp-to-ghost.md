@@ -2,7 +2,7 @@
 title: Migrating from WP to Ghost
 slug: migrating-from-wp-to-ghost
 status: published
-publishedDate: '2017-04-14T07:51:00.000Z'
+date: '2017-04-14T07:51:00.000Z'
 metaDescription: null
 metaTitle: null
 ---

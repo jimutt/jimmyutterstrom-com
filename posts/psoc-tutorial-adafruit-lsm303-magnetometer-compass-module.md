@@ -2,7 +2,7 @@
 title: PSoC Tutorial - Adafruit LSM303 magnetometer (compass) module
 slug: psoc-tutorial-adafruit-lsm303-magnetometer-compass-module
 status: published
-publishedDate: '2015-07-12T10:04:23.000Z'
+date: '2015-07-12T10:04:23.000Z'
 metaDescription: null
 metaTitle: null
 ---

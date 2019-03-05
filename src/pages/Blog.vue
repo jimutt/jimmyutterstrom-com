@@ -17,7 +17,7 @@
 
 <page-query>
   query Posts ($page: Int) {
-    allPost (perPage: 5, page: $page, sortBy: "publishedDate", order: DESC) @paginate {
+    allPost (perPage: 5, page: $page, sortBy: "date", order: DESC) @paginate {
       pageInfo {
         totalPages
         currentPage
@@ -27,7 +27,7 @@
           _id
           title
           content 
-          publishedDate
+          date
           path
         }
       }

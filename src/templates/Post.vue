@@ -2,7 +2,7 @@
   <Layout>
     <article class="post">
       <h1>{{$page.post.title}}</h1>
-      <span class="post-summary__date">{{toDateString($page.post.publishedDate)}}</span>
+      <span class="post-summary__date">{{toDateString($page.post.date)}}</span>
       <p v-html="$page.post.content"></p>
     </article>
   </Layout>
@@ -13,7 +13,7 @@ query Post ($path: String!) {
   post: post (path: $path) {
     title
     content
-    publishedDate
+    date
   }
 }
 </page-query>

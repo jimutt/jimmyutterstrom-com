@@ -5,7 +5,7 @@
         <h2>
           <g-link :to="post.node.path">{{post.node.title}}</g-link>
         </h2>
-        <span class="post-summary__date">{{toDateString(post.node.publishedDate)}}</span>
+        <span class="post-summary__date">{{toDateString(post.node.date)}}</span>
         <p>
           <span v-html="summary(post.node.content)"></span>
           <g-link :to="post.node.path" class="post-summary__more">[Read More]</g-link>
@@ -37,7 +37,7 @@ export default {
     orderedPosts() {
       return this.posts.sort(
         (a, b) =>
-          new Date(b.node.publishedDate) - new Date(a.node.publishedDate)
+          new Date(b.node.date) - new Date(a.node.date)
       );
     }
   }

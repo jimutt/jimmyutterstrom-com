@@ -2,7 +2,7 @@
 title: What's going on?
 slug: whats-going-on
 status: published
-publishedDate: '2015-09-28T15:30:03.000Z'
+date: '2015-09-28T15:30:03.000Z'
 metaDescription: null
 metaTitle: null
 ---
@@ -16,5 +16,3 @@ At the university we’ve recently been constructing a remote controlled vehicle
 ![Vehicle](https://di2hdke024x80.cloudfront.net/images/WP_20150925_004.jpg)
 
 This project is finished now and next we will be working some with the Atmel SAMD21E18 32 bit micro controller. I’m looking forward to gain some experience with Atmel’s line of 32 bit MCUs as I’ve only been working with PSoC so far. Though, based on what I’ve seen until now, I still think that the PSoC environment is a easier to work with and I don’t really think that Atmel’s ASF give you as user-friendly tools as PSoC creator does. Though I have only been looking at a few ASF examples this far so I’ll have to see what I think about it after I’ve actually been using it for something a bit more substantial.
-
-

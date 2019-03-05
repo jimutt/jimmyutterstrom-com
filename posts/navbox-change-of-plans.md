@@ -2,7 +2,7 @@
 title: NavBox - Change of plans
 slug: navbox-change-of-plans
 status: published
-publishedDate: '2015-07-31T19:31:21.000Z'
+date: '2015-07-31T19:31:21.000Z'
 metaDescription: null
 metaTitle: null
 ---
@@ -16,14 +16,14 @@ I’m developing the app on my Windows PC with Cordova CLI. The available Cordov
 ![](https://di2hdke024x80.cloudfront.net/images/NavBox/vue.PNG)Vue.js is a lightweight (68.32kb minified) Javascript MVVM framework that’s mainly focusing on the ViewModel layer. You might be wondering why I don’t chose to go with a more proven and popular framework like Angular for example. Well, I could do that of course. But when working on smaller projects I often I feel like I don’t need 80% of the stuff Angular provides me with. There are also times when I don’t like how Angular handles different things. In situations like that I would prefer a more simple and customizable framework and that’s where Vue.js enters the scene. Here’s an extract from the FAQ page on the official Vue.js website where the author of the framework explains why he prefers Vue over Angular:
 
 > There are a few reasons to use Vue over Angular, although they might not apply for everyone:
-> 
->  Vue.js is a more flexible, less opinionated solution. That allows you to structure your app the way you want it to be, instead of being forced to do everything the Angular way. It’s only an interface layer so you can use it as a light feature in pages instead of a full blown SPA. It gives you bigger room to mix and match with other libraries, but you are also responsible for making more architectural decisions. For example, Vue.js’ core doesn’t come with routing or ajax functionalities by default, and usually assumes you are building the application using an external module bundler. This is probably the most important distinction.
-> 
->  Vue.js is much simpler than Angular, both in terms of API and design. You can learn almost everything about it really fast and get productive.
-> 
->  Vue.js has better performance because it doesn’t use dirty checking. Angular gets slow when there are a lot of watchers, because every time anything in the scope changes, all these watchers need to be re-evaluated again. Vue.js doesn’t suffer from this because it uses a transparent dependency-tracking observing system – all changes trigger independently unless they have explicit dependency relationships.
-> 
->  Vue.js has a clearer separation between directives and components. Directives are meant to encapsulate DOM manipulations only, while Components stand for a self-contained unit that has its own view and data logic. In Angular there’s a lot of confusion between the two.
+>
+> Vue.js is a more flexible, less opinionated solution. That allows you to structure your app the way you want it to be, instead of being forced to do everything the Angular way. It’s only an interface layer so you can use it as a light feature in pages instead of a full blown SPA. It gives you bigger room to mix and match with other libraries, but you are also responsible for making more architectural decisions. For example, Vue.js’ core doesn’t come with routing or ajax functionalities by default, and usually assumes you are building the application using an external module bundler. This is probably the most important distinction.
+>
+> Vue.js is much simpler than Angular, both in terms of API and design. You can learn almost everything about it really fast and get productive.
+>
+> Vue.js has better performance because it doesn’t use dirty checking. Angular gets slow when there are a lot of watchers, because every time anything in the scope changes, all these watchers need to be re-evaluated again. Vue.js doesn’t suffer from this because it uses a transparent dependency-tracking observing system – all changes trigger independently unless they have explicit dependency relationships.
+>
+> Vue.js has a clearer separation between directives and components. Directives are meant to encapsulate DOM manipulations only, while Components stand for a self-contained unit that has its own view and data logic. In Angular there’s a lot of confusion between the two.
 
 Source: [http://vuejs.org/guide/faq.html](http://vuejs.org/guide/faq.html)
 
@@ -41,5 +41,3 @@ Today I’ve put together a basic UI idea for one of the three main “views” 
 The “Manual Control” view that will be added later will probably contain some controls for sending commands to the vessel. For example to cancel the navigation and make the vehicle drivehome or adjusting speed etc. The “Waypoints” view will feature a much bigger map as well as a toolbar for adding/editing and deleting waypoints. Though before I implement those two views I will try to make sure that the communication between the Android device and the PSoC board is working so that I can get some real data for the info view.
 
 I haven’t implemented any routing functionality yet neither. Currently Vue.js does not have any built-in router. Though there is one that’s under development and not fully released yet. An otherpossibilityis to use a stand-alone routing library like Page.js or Director. I’ve not decided for sure how I’ll solve this, I might perhaps first try the [vue-router](https://github.com/vuejs/vue-router) and see if I can get it to work. If not I’ll probably go fora stand-alone routing lib.
-
-

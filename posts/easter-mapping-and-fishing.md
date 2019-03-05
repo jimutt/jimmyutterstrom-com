@@ -2,7 +2,7 @@
 title: Easter mapping (and fishing)
 slug: easter-mapping-and-fishing
 status: published
-publishedDate: '2016-03-26T16:14:15.000Z'
+date: '2016-03-26T16:14:15.000Z'
 metaDescription: null
 metaTitle: null
 ---
@@ -22,5 +22,3 @@ Open source and outdoor life; I’m trying to include both of these fabulous thi
 
 While visiting the very small village, in which my parents live, me and my brother seized the opportunity to go ice fishing. The sun was shining but it was a bit windy. Though to my surprise I managed to catch a nice whitefish (“sik” in Swedish) weighing 0.72 kg. Quite nice for ice fishing! At least for me who almost only use to fish during summer.  
 ![Whitefish](http://di2hdke024x80.cloudfront.net/images/sik_2016-03-26.jpg)
-
-

@@ -2,7 +2,7 @@
 title: Modbus master
 slug: modbus-master
 status: published
-publishedDate: '2015-11-22T21:11:19.000Z'
+date: '2015-11-22T21:11:19.000Z'
 metaDescription: null
 metaTitle: null
 ---
@@ -13,10 +13,8 @@ Now I’ve moved on to a new project where my and my project group consisting of
 
 
 
-![](https://di2hdke024x80.cloudfront.net/images/Kommunikationsschema+-+Kommunikationsschema+(1).png)
+![](<https://di2hdke024x80.cloudfront.net/images/Kommunikationsschema+-+Kommunikationsschema+(1).png>)
 
 I’ll be in charge of the web interface and therefore I’ll not be working very much with the hardware. The current plan though is to use a Cortex M0+ MCU running FreeRTOS together with the modbus transceiver and the ethernet interface chip which are shown in the above diagram.
 
 I’ve mainly been working with ASP.NET and PHP earlier so I’m looking forward into implementing the web interface with Node.js and Express this time. I’ll be going for a SPA and a standalone REST API. For the communication between the server and the master we’ll opt in for a direct TCP socket connection for quick real-time data transfer.
-
-

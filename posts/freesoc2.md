@@ -2,7 +2,7 @@
 title: PSoC and FreeSoC2
 slug: freesoc2
 status: published
-publishedDate: '2015-06-30T13:29:44.000Z'
+date: '2015-06-30T13:29:44.000Z'
 metaDescription: null
 metaTitle: null
 ---

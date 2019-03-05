@@ -2,7 +2,7 @@
 title: Wifi enabled fish feeder system
 slug: wifi-enabled-fish-feeder-system
 status: published
-publishedDate: '2015-12-14T18:17:45.000Z'
+date: '2015-12-14T18:17:45.000Z'
 metaDescription: null
 metaTitle: null
 ---
@@ -29,5 +29,3 @@ Below is a basic overview of the complete system and the technologies used:
 You might be thinking that I could run the complete system with only the rPI. And that’s completely right! The only reason I’m using the Photon though is mainly because I just bought it and wanted to use it for something. Actually I came up with the whole project idea when I was thinking about what I could be using the Photon for.
 
 I’ve only been testing the system for a a day or so but it seems to be working pretty good. I might write a bit more about the project later. Perhaps about the modification I’ve done to the feeders and a more in depth description of the system.
-
-

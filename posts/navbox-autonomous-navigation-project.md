@@ -2,13 +2,12 @@
 title: NavBox - Autonomous navigation project
 slug: navbox-autonomous-navigation-project
 status: published
-publishedDate: '2015-07-27T20:01:04.000Z'
+date: '2015-07-27T20:01:04.000Z'
 metaDescription: null
 metaTitle: null
 ---
 
 Robotics, RC vehicles, rovers and UAV:s are all big interests of mine. I’ve always been into radio controlled vehicles of different types and since a while ago I’ve been thinking about how fun it would be to build a more autonomous vehicle. That’s why I’ve came up with the idea of the current project I’m working on.
-
 
 ## Project NavBox
 
@@ -73,5 +72,3 @@ Well there’s still a quite long way to go until I’ve even got a first protot
 So far I haven’t got much to show really. A couple of modules on a breadboard aren’t that fun to look at. Though I’ve been outside walking with the current prototypeandletting it guide me to a number of set waypoints just to check that I’ve got the basic navigation right and that the magnetometer readings are accurate. Everything is looking good so far, so after making a basic version of the control panel I will probably upload some images and maybe a video clip showing the progress.
 
 My goal is being able to test the system with a real vehicle (probably an RC-boat) before the lakes around here get all covered by ice. As I live in the northern part of Sweden that time could come pretty fast but I’ve at least have a couple of months left until my preliminary deadline. If I were able to put at least an hour/day on the project I would probably have a working prototype quite fast. But with studies and other activities I’m pretty sure it will take some time. Though I’ll hopefully be ableto give you some status updates on the project a bit now and then.
-
-
