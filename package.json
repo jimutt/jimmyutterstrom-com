@@ -9,14 +9,14 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "gridsome": "^0.3.5",
-    "snyk": "^1.110.2"
+    "gridsome": "^0.5.0",
+    "snyk": "^1.135.1"
   },
   "devDependencies": {
-    "@gridsome/remark-prismjs": "0.0.3",
-    "@gridsome/source-filesystem": "^0.2.0",
-    "@gridsome/transformer-remark": "^0.1.1",
-    "node-sass": "^4.10.0",
+    "@gridsome/remark-prismjs": "0.0.4",
+    "@gridsome/source-filesystem": "0.3.0",
+    "@gridsome/transformer-remark": "0.2.1",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
   },
   "snyk": true

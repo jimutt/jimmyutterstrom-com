@@ -53,6 +53,13 @@ hr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+blockquote {
+  border-left: 5px solid #eee;
+  color: #888;
+  margin-left: 0;
+  padding-left: 3rem;
+}
+
 .layout {
   max-width: 760px;
   margin: 0 auto;

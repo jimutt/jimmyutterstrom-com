@@ -78,5 +78,3 @@ Next click “Open” and you should see a blank terminal. If you then write som
 [![](http://jimmyutterstrom.com/wp-content/uploads/2015/07/m1.gif)](http://jimmyutterstrom.com/wp-content/uploads/2015/07/m1.gif)
 
 Well that’s it! This is one method you can use to achieve a serial communication link between your FreeSoC2 board and your PC. Later I might maybedemonstratehow to use the USBUART component as well.
-
-

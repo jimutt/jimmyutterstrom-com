@@ -13,33 +13,33 @@ This tutorial is made for people who already know the basics of the PSoC ecosyst
 
 To get as good results as possible when using a magnetometer you need to compensate for the magnetometer’s angle to the ground. That’s why we’ve got an accelerometer in the module as well. But to keep this guide at a basic level (and make the timeframe of writing it fit with my busy life) we will not use the accelerometer readings in this project and we will only work with the X and Y values from the magnetometer. Then I will perhaps make a complimentary tutorial on how to implement tilt compensation later on.
 
-
 ## **Hardware Needed**
 
 [FreeSoC2 (or other PSoC board)](https://www.sparkfun.com/products/13229) :
 
-<div class="wp-caption alignnone" style="width: 610px">![](https://di2hdke024x80.cloudfront.net/images/FreeSoC2.jpg)Source: https://www.sparkfun.com/products/13229
+![](https://di2hdke024x80.cloudfront.net/images/FreeSoC2.jpg)
 
-</div>1 [Adafruit LSM303DLHC](http://www.adafruit.com/products/1120) combined accelerometer/magnetometer module:
+[Adafruit LSM303DLHC](http://www.adafruit.com/products/1120), combined accelerometer/magnetometer module:
 
-<div class="wp-caption alignnone" style="width: 610px">![](https://di2hdke024x80.cloudfront.net/images/adafruit_LSM303DLHC.jpg)Source: http://www.adafruit.com/products/1120
+![](https://di2hdke024x80.cloudfront.net/images/adafruit_LSM303DLHC.jpg)Source: http://www.adafruit.com/products/1120
 
-</div>You will probably want to have a few jumper wires and a breadboard as well.
-
+You will probably want to have a few jumper wires and a breadboard as well.
 
 ## **Introduction/Theory**
 
-*In this section I will describe the basic theory of what we are going to create and how we will use the magnetometer’s output. If you feel like what’s described here is below your current knowledge level just skip to the next part!*
+_In this section I will describe the basic theory of what we are going to create and how we will use the magnetometer’s output. If you feel like what’s described here is below your current knowledge level just skip to the next part!_
 
-First of all, what is a magnetometer and how can it help us determine which directionwe are pointing at? Well according to Wikipedia *“magnetometers are measurement instruments used for two general purposes: to measure the [magnetization](https://en.wikipedia.org/wiki/Magnetization "Magnetization") of a magnetic material like a [ferromagnet](https://en.wikipedia.org/wiki/Ferromagnet "Ferromagnet"), or to measure the strength and, in some cases, the direction of the [magnetic field](https://en.wikipedia.org/wiki/Magnetic_field "Magnetic field") at a point in space”*.
+First of all, what is a magnetometer and how can it help us determine which directionwe are pointing at? Well according to Wikipedia _“magnetometers are measurement instruments used for two general purposes: to measure the [magnetization](https://en.wikipedia.org/wiki/Magnetization 'Magnetization') of a magnetic material like a [ferromagnet](https://en.wikipedia.org/wiki/Ferromagnet 'Ferromagnet'), or to measure the strength and, in some cases, the direction of the [magnetic field](https://en.wikipedia.org/wiki/Magnetic_field 'Magnetic field') at a point in space”_.
 
-<div class="wp-caption alignright" style="width: 320px">![](http://www.unc.edu/depts/oceanweb/turtles/geomag.gif)Earth’s magnetic field Source: http://www.unc.edu/depts/oceanweb/turtles/geomag.html
+![](http://www.unc.edu/depts/oceanweb/turtles/geomag.gif)
 
-</div>In the case of the LSM303 we can both measure the strength and direction of the magnetic field surrounding the sensor. And as you know a compass needle is drawn towards the earth’s north magnetic pole which is the place where our planet’s magnetic field points vertically downwards. The earth’s magnetic field can be seen in the illustration to the right. In the same way the magnetic force affecting the magnetometer will be largest from the direction of the magnetic north pole if there are no other magnetic fields in the area. From the three axis output values that the LSM303 provides us with we can then calculate in which direction we are heading.
+Earth’s magnetic field Source: http://www.unc.edu/depts/oceanweb/turtles/geomag.html
 
-The X, Y and Z output that the accelerometer gives us is specified in [micro-Teslas](https://en.wikipedia.org/wiki/Tesla_(unit)). Lets say that we get the following values:
+In the case of the LSM303 we can both measure the strength and direction of the magnetic field surrounding the sensor. And as you know a compass needle is drawn towards the earth’s north magnetic pole which is the place where our planet’s magnetic field points vertically downwards. The earth’s magnetic field can be seen in the illustration to the right. In the same way the magnetic force affecting the magnetometer will be largest from the direction of the magnetic north pole if there are no other magnetic fields in the area. From the three axis output values that the LSM303 provides us with we can then calculate in which direction we are heading.
 
- x = 130   
+The X, Y and Z output that the accelerometer gives us is specified in [micro-Teslas](<https://en.wikipedia.org/wiki/Tesla_(unit)>). Lets say that we get the following values:
+
+x = 130  
  y = 140  
  z = 12  
  (we’re just using some random numbers for now)
@@ -60,7 +60,6 @@ This means that our current heading is 0.82 radians! Though radians aren’t com
 
 For the basic application we aim to create within this tutorial this is all we need to know for now! So let’s move on to the fun parts!
 
-
 ## Step 1. Connecting the hardware
 
 For this tutorial I will be using the FreeSoC2 board but you should be able to follow along just fine with most other PSoC dev kit. What’s most important is that you’ve got the same compass module as me.
@@ -69,50 +68,123 @@ The LSM303 breakout module have 8 pins. Though we will only need to use four of 
 
 ![](https://s3-eu-west-1.amazonaws.com/jimmyutterstrom.com/tutorials/ShowMyHeading/Images/LSM303_Connection.png)
 
-
 ## Step 2. Adding components in PSoC Creator
 
- Now we’ll add our I2C and UART component as well as configuring the pin routing.
+Now we’ll add our I2C and UART component as well as configuring the pin routing.
 
 **Add components:**
 
-<div class="wp-video" style="width: 640px; "><video class="wp-video-shortcode" controls="controls" height="360" id="video-64-1" preload="metadata" width="640"><source src="https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Videos/addComponents.mp4?_=1" type="video/mp4"></source>[https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Videos/addComponents.mp4](https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Videos/addComponents.mp4)</video></div>**Configure routing:**
+<div class="wp-video" style="width: 640px; "><video class="wp-video-shortcode" controls="controls" height="360" id="video-64-1" preload="metadata" width="640"><source src="https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Videos/addComponents.mp4?_=1" type="video/mp4"></source>[https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Videos/addComponents.mp4](https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Videos/addComponents.mp4)</video></div>
+
+**Configure routing:**
 
 **  
 [![](https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Images/routing.JPG)](https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Images/routing.JPG)  
 **
 
-
 ## Step 3. Programming
 
 When we’ve got the components configured and the routing are setup we can start programming. First we’ll initialize the UART module by adding the following code in the beginning of the main function. Remember that we’re using the same UART setup as in my Easy UART tutorial found [here](http://jimmyutterstrom.com/2015/07/freesoc-2-easy-uart/).
 
-<script src="https://gist.github.com/jimutt/f98a4b9623e63cebf04da0964d8ae36d.js"></script>
+```C
+PCUARTStart();
+LSM303I2CStart();
+```
 
 We will then define some constants for our project where we will store the addresses of the registers and values we want to write to the LSM303 module. The names are at least somehow self-explanatory and if you want to read more about the specific registers please take a look at the [datasheet for the LSM303DLHC](http://www.adafruit.com/datasheets/LSM303DLHC.PDF). If you want to learn how I2C communication works in general there are plenty of good resources out there. For example [this one](http://www.robot-electronics.co.uk/acatalog/I2C_Tutorial.html).
 
-<script src="https://gist.github.com/jimutt/587989d66d9672f4e01b8c6b8189f9bf.js"></script>
+```
+#define LSM303_ADDRESS_ACCEL (0x32 >> 1)
+#define LSM303_ADDRESS_MAG (0x3C >> 1)
+#define LSM303_REGISTER_ACCEL_CTRL_REG1_A 0x20
+#define LSM303_REGISTER_MAG_MR_REG_M 0x02
+#define LSM303_REGISTER_MAG_OUT_X_H_M 0x03
+#define LSM303_REGISTER_ACCEL_OUT_X_L_A 0x28
+```
 
 Now when we got our constants wecanstart communicating with the LSM303 module. To do this we’ll first need to send a number of instructions through our I2C interface for enabling the accelerometer (although we will only be working with the magnetometer data in this tutorial) and magnetometer.
 
 This is done by first sending a start command with the “LSM303_I2C_MasterSendStart()” function. This will initialize our communication session and we are then ready to send the data instructions. Before I continue I want to emphasize the fact that there are more then just one way of communicating through I2C in PSoC. In this case I’m only using what I think are the most basic functions:
 
-MasterSendStart() – Initiates communication   
- MasterWriteByte() – Writes one byte to the slave   
- MasterReadByte() – Reads one byte from the slave  
- MasterSendStop() – Closes the communication session
+`MasterSendStart()` – Initiates communication  
+`MasterWriteByte()` – Writes one byte to the slave  
+`MasterReadByte()` – Reads one byte from the slave  
+`MasterSendStop()` – Closes the communication session
 
 This is to more clearly show what’s going on. Though there are other functions like for example MasterWriteBuf() and MasterReadBuf() that allows you to read/write more than just one byte of data. If you look at the documentation for the I2C component in PSoC creator you will find information for all available functions.
 
 We will begin by creating the function “LSM303_init”for initializing/starting the module. Here we’ll configure a couple of registers so that the LSM303 module will work and behave in a correct way.
 
-<script src="https://gist.github.com/jimutt/ebbaa82a6e0950efc4a2194ecab3f4c2.js"></script>
+```C
+void LSM303_Init() {
+    //Start the I2C component.
+    LSM303_I2C_Start();
+
+    /*------------ Accelerometer ------------*/
+
+    //Send start command for write mode.
+    LSM303_I2C_MasterSendStart(LSM303_ADDRESS_ACCEL, LSM303_I2C_WRITE_XFER_MODE);
+
+    //Specify which register we want to write to.
+    //This register is written to for enabling x, y and z
+    //output as well as setting datarate and powermode.
+    LSM303_I2C_MasterWriteByte(LSM303_REGISTER_ACCEL_CTRL_REG1_A);
+
+    //Set the required bits in the register.
+    LSM303_I2C_MasterWriteByte(0x27u);
+
+    /*------------ Magnetometer ------------*/
+
+    //This register is written to for setting data output rates
+    //and controlling measurement flow.
+    LSM303_I2C_MasterWriteByte(LSM303_REGISTER_MAG_MR_REG_M);
+    LSM303_I2C_MasterWriteByte(0x00u);
+
+    LSM303_I2C_MasterSendStop();
+}
+```
 
 Now after the module has been initialized we can go ahead with retrieving the output from the magnetometer.As we know that the magnetometer outputs data for the x, y and z axis it would be comfortable to store all three readings at the same place. Therefore I will create a struct and call it “Vector3”: `typedef struct Vector3 { int x; int y; int z; } Vector3;`
 
 Next we will implement a function for reading the magnetometer data from the LSM303. We will call this function LSM303_ReadMag and its implementation is shown below. There are many comments so I think you should be able to follow what’s happening.
 
-<script src="https://gist.github.com/jimutt/6e180e45e2547188bf254bccbfb0480c.js"></script>
+```C
+void LSM303_ReadMag(Vector3 *magData) {
+
+    uint8 data[6];
+
+    //Prepare the module for magnetometer output.
+    LSM303_I2C_MasterSendStart(LSM303_ADDRESS_MAG, LSM303_I2C_WRITE_XFER_MODE);
+
+    LSM303_I2C_MasterWriteByte(LSM303_REGISTER_MAG_OUT_X_H_M);
+
+    LSM303_I2C_MasterSendStop();
+    //--
+
+    //Start the communication in read mode.
+    LSM303_I2C_MasterSendStart(LSM303_ADDRESS_MAG, LSM303_I2C_READ_XFER_MODE);
+
+    //Read databytes.
+    data[0] = LSM303_I2C_MasterReadByte(LSM303_I2C_ACK_DATA);
+    data[1] = LSM303_I2C_MasterReadByte(LSM303_I2C_ACK_DATA);
+    data[2] = LSM303_I2C_MasterReadByte(LSM303_I2C_ACK_DATA);
+    data[3] = LSM303_I2C_MasterReadByte(LSM303_I2C_ACK_DATA);
+    data[4] = LSM303_I2C_MasterReadByte(LSM303_I2C_ACK_DATA);
+
+    //Notice that we are here using "NAK_DATA". It's to tell the
+    //LSM303 that we're done and don't want to read anymore data.
+    data[5] = LSM303_I2C_MasterReadByte(LSM303_I2C_NAK_DATA);
+
+    //Put together the different data bytes to form complete
+    //integers for storing the output values.
+    magData->x = (int16_t)(data[1] | (data[0] << 8));
+    magData->y = (int16_t)(data[5] | (data[4] << 8));
+    magData->z = (int16_t)(data[3] | (data[2] << 8));
+
+    LSM303_I2C_MasterSendStop();
+
+}
+```
 
 We now have everything we need to setup and read data from the module. But as our main goal was to calculate and show our current heading we will need to implement functionality for that as well. For this small example application we will implement this code in the main function. We will use the atan2 function from the math library so first of all you’ll need to add “#include <math.h>”.
 
@@ -120,14 +192,46 @@ Note that you will probably need to add the library to the gcc linker in your pr
 
 After we’ve fetched the math library we will be able run the following code in our main function:
 
-<script src="https://gist.github.com/jimutt/4a6d76cb59f5fc93080c47a15cb9dbce.js"></script>
+```C
+int main()
+{
+    Vector3 magData;
+    char output[4]; //String for storing uart output.
+
+    PC_UART_Start();
+    LSM303_Init();
+
+    /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
+    for(;;)
+    {
+        LSM303_ReadMag(&magData);
+
+        //Calculate heading using arctan on the Y and X vectors.
+        //And convert from radians to degrees.
+        float h = (atan2(magData.y, magData.x) * 180.0) / 3.14159265359;
+
+        //Map the value to comply with the standard system where the heading
+        //is specified as an angle between 0 - 360 degrees.
+        if(h < 0) {
+            h = 360 + h;
+        }
+
+        //Output the heading through our UART component.
+        sprintf(output, "%i\r\n", (int)(h+0.5));
+        PC_UART_PutString(output);
+
+        //Update heading at 1 Hz
+        CyDelay(1000);
+
+    }
+}
+```
 
 Don’t forget to include the stdio lib for the sprintf function.
 
-
 ## Step 4. Run it!
 
- All you need to do now is to build and program the project. Then use your favourite terminal software and open the COM board for your PSoC board. You should then get an output similiar to this:
+All you need to do now is to build and program the project. Then use your favourite terminal software and open the COM board for your PSoC board. You should then get an output similiar to this:
 
 ![](https://s3-eu-west-1.amazonaws.com/jimmyutterstrom.com/tutorials/ShowMyHeading/Images/output.JPG)
 
@@ -140,5 +244,3 @@ If you don’t get any output at all you should first check that your UART modul
 If you get some output but it’s just weird numbers and not anything between 0 – 360 check that all I2C commands looks exactly like in my code. And if that doesn’t help you feel free to post a comment with your issue.
 
 To download a complete main.c file with all the above code click **[here](https://s3-eu-west-1.amazonaws.com/jimmyutterstrom.com/tutorials/ShowMyHeading/Files/main.c)**.
-
-
