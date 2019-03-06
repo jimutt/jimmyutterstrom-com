@@ -9,7 +9,6 @@ module.exports = {
       ]
     }
   },
-
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -23,4 +22,4 @@ module.exports = {
       }
     }
   ]
-}
+};
