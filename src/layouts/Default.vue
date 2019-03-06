@@ -1,7 +1,9 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>Jimmy Utterström</strong>
+      <g-link class="nav__link logo" :to="{ name: 'home' }">
+        <strong>Jimmy Utterström</strong>
+      </g-link>
       <nav class="nav">
         <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
         <g-link class="nav__link" :to="{name: 'blog' }">Blog</g-link>
@@ -72,17 +74,35 @@ blockquote {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 20px;
   height: 80px;
+
+  @media screen and (max-width: 599px) {
+    .logo {
+      font-size: 1rem;
+    }
+
+    .logo,
+    .nav {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
+    }
+  }
 }
 
 .nav__link {
-  margin-left: 30px;
   color: #56442d;
   font-weight: bold;
+  font-size: 1.25rem;
 
   &:hover {
     color: #998977;
+  }
+
+  &:not(:first-child) {
+    margin-left: 30px;
   }
 }
 
@@ -101,5 +121,20 @@ blockquote {
   &__link-older {
     float: right;
   }
+}
+
+.avatar-image {
+  position: relative;
+  border-radius: 50%;
+  min-width: 150px;
+  min-height: 150px;
+  width: 25vw;
+  height: 25vw;
+  max-width: 250px;
+  max-height: 250px;
+  background: white;
+
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;
 }
 </style>
