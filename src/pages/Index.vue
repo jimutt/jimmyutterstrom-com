@@ -8,11 +8,11 @@
       />
       <p>
         Welcome to the personal site of a Swedish software developer with a
-        passion for singing, web development and embedded systems!
+        passion for singing, web development, embedded systems and tea!
       </p>
       <p>
         Scroll down to read my latest blog posts or
-        <a href="#">click here</a> for more information about me.
+        <g-link to="/about">click here</g-link> for more information about me.
       </p>
     </div>
     <h1>Blog</h1>
