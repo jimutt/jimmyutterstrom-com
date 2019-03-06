@@ -13,4 +13,4 @@ It’s a quite basic example that isn’t production ready but it still features
 
 For more information and to see it in action and access the source code please visit the Github repo for the project: [https://github.com/jimutt/Vue.js-socket.io-chatroom-example](https://github.com/jimutt/Vue.js-socket.io-chatroom-example)
 
-[![chatExample](http://jimmyutterstrom.com/wp-content/uploads/2016/01/chatExample.png)](http://jimmyutterstrom.com/wp-content/uploads/2016/01/chatExample.png)
+[![chatExample](https://jimmyutterstrom.com/wp-content/uploads/2016/01/chatExample.png)](http://jimmyutterstrom.com/wp-content/uploads/2016/01/chatExample.png)

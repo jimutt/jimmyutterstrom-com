@@ -31,7 +31,7 @@ _In this section I will describe the basic theory of what we are going to create
 
 First of all, what is a magnetometer and how can it help us determine which directionwe are pointing at? Well according to Wikipedia _“magnetometers are measurement instruments used for two general purposes: to measure the [magnetization](https://en.wikipedia.org/wiki/Magnetization 'Magnetization') of a magnetic material like a [ferromagnet](https://en.wikipedia.org/wiki/Ferromagnet 'Ferromagnet'), or to measure the strength and, in some cases, the direction of the [magnetic field](https://en.wikipedia.org/wiki/Magnetic_field 'Magnetic field') at a point in space”_.
 
-![](http://www.unc.edu/depts/oceanweb/turtles/geomag.gif)
+![](https://www.unc.edu/depts/oceanweb/turtles/geomag.gif)
 
 Earth’s magnetic field Source: http://www.unc.edu/depts/oceanweb/turtles/geomag.html
 
@@ -188,7 +188,7 @@ void LSM303_ReadMag(Vector3 *magData) {
 
 We now have everything we need to setup and read data from the module. But as our main goal was to calculate and show our current heading we will need to implement functionality for that as well. For this small example application we will implement this code in the main function. We will use the atan2 function from the math library so first of all you’ll need to add “#include <math.h>”.
 
-Note that you will probably need to add the library to the gcc linker in your project settings as well. To do that please refer to this official guide:[http://www.cypress.com/knowledge-base-article/using-math-functions-psoc-creator-psoc-4-or-psoc-5lp-gcc-compiler-kba93076](http://www.cypress.com/knowledge-base-article/using-math-functions-psoc-creator-psoc-4-or-psoc-5lp-gcc-compiler-kba93076)
+Note that you will probably need to add the library to the gcc linker in your project settings as well. To do that please refer to this official guide: [http://www.cypress.com/knowledge-base-article/using-math-functions-psoc-creator-psoc-4-or-psoc-5lp-gcc-compiler-kba93076](http://www.cypress.com/knowledge-base-article/using-math-functions-psoc-creator-psoc-4-or-psoc-5lp-gcc-compiler-kba93076)
 
 After we’ve fetched the math library we will be able run the following code in our main function:
 

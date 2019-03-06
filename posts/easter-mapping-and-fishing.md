@@ -23,4 +23,4 @@ Personally I use to dedicate some of my spare time now and then to contribute to
 ### Ice Fishing
 
 While visiting the very small village, in which my parents live, me and my brother seized the opportunity to go ice fishing. The sun was shining but it was a bit windy. Though to my surprise I managed to catch a nice whitefish (“sik” in Swedish) weighing 0.72 kg. Quite nice for ice fishing! At least for me who almost only use to fish during summer.  
-![Whitefish](http://di2hdke024x80.cloudfront.net/images/sik_2016-03-26.jpg)
+![Whitefish](https://di2hdke024x80.cloudfront.net/images/sik_2016-03-26.jpg)

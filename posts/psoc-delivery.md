@@ -11,6 +11,6 @@ Today the mailman delivered a small but stillvery anticipatedpackage. I just g
 
 The downside with larger prototyping boards like FreeSoC2 or the PSoC4 Pioneer board is that if you’re a hobbyist who can’t afford the time and cost to order a custom PCB when you’re done prototyping it can be hard to make the dev board fit in your project due to its physical size. That’s why I really like that Cypress is offering this cheap kit which allows for rapid prototyping with the snap-off programmer/debugger as well as it’s small enough to fit in many different applications. I would love to see more compact PSoC-solutions like this one in the future.
 
-![](http://di2hdke024x80.cloudfront.net/images/psocDelivery.jpg)
+![](https://di2hdke024x80.cloudfront.net/images/psocDelivery.jpg)
 
 I’ll probably write a new post when I’ve had the chance to test them!
