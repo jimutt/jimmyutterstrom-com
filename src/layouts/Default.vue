@@ -6,11 +6,11 @@
       </g-link>
       <nav class="nav">
         <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
-        <g-link class="nav__link" :to="{name: 'blog' }">Blog</g-link>
+        <g-link class="nav__link" :to="{ name: 'blog' }">Blog</g-link>
         <g-link class="nav__link" :to="{ name: 'about' }">About</g-link>
       </nav>
     </header>
-    <slot/>
+    <slot />
   </div>
 </template>
 
