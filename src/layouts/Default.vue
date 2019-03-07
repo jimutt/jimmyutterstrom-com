@@ -107,6 +107,9 @@ blockquote {
 }
 
 .pagination {
+  display: flex;
+  justify-content: space-between;
+
   &__link-newer,
   &__link-older {
     font-size: 1.1rem;
@@ -116,10 +119,6 @@ blockquote {
     &:hover {
       color: #998977;
     }
-  }
-
-  &__link-older {
-    float: right;
   }
 }
 

@@ -74,6 +74,10 @@ export default {
   font-style: italic;
   text-align: center;
 }
+
+.pagination__link-older {
+  float: right;
+}
 </style>
 
 

@@ -10,6 +10,7 @@
       prevClass="pagination__link-newer"
       nextLabel="Older posts →"
       nextClass="pagination__link-older"
+      class="pagination"
     />
   </Layout>
 </template>
