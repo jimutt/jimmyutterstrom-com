@@ -7,7 +7,7 @@ metaDescription: null
 metaTitle: null
 ---
 
-Read the introduction to my home automation project here if you haven’t already: [http://jimmyutterstrom.com/2016/03/home-automation-plans/](http://jimmyutterstrom.com/2016/03/home-automation-plans/)
+Read the introduction to my home automation project here if you haven’t already: [http://jimmyutterstrom.com/2016/03/home-automation-plans/](http://jimmyutterstrom.com/2016/03/08/home-automation-plans/)
 
 The foundation of the home automation system is the MQTT communication interface. As all connected devices will communicate through the MQTT broker (which I will try to cover later). Though most of the automation logic which control when devices should be switched on and off will be contained in the main server. Mainly to make the firmware development for the different devices easier by not needing to handle all the different on/off conditions etc. directly on the peripherals.
 
