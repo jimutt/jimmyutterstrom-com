@@ -29,7 +29,7 @@ You will probably want to have a few jumper wires and a breadboard as well.
 
 _In this section I will describe the basic theory of what we are going to create and how we will use the magnetometer’s output. If you feel like what’s described here is below your current knowledge level just skip to the next part!_
 
-First of all, what is a magnetometer and how can it help us determine which directionwe are pointing at? Well according to Wikipedia _“magnetometers are measurement instruments used for two general purposes: to measure the [magnetization](https://en.wikipedia.org/wiki/Magnetization 'Magnetization') of a magnetic material like a [ferromagnet](https://en.wikipedia.org/wiki/Ferromagnet 'Ferromagnet'), or to measure the strength and, in some cases, the direction of the [magnetic field](https://en.wikipedia.org/wiki/Magnetic_field 'Magnetic field') at a point in space”_.
+First of all, what is a magnetometer and how can it help us determine which direction we are pointing at? Well according to Wikipedia _“magnetometers are measurement instruments used for two general purposes: to measure the [magnetization](https://en.wikipedia.org/wiki/Magnetization 'Magnetization') of a magnetic material like a [ferromagnet](https://en.wikipedia.org/wiki/Ferromagnet 'Ferromagnet'), or to measure the strength and, in some cases, the direction of the [magnetic field](https://en.wikipedia.org/wiki/Magnetic_field 'Magnetic field') at a point in space”_.
 
 ![](https://www.unc.edu/depts/oceanweb/turtles/geomag.gif)
 
@@ -44,13 +44,13 @@ x = 130
  z = 12  
  (we’re just using some random numbers for now)
 
-To make it as simple as possible let’s assume thatwe’re holding our magnetometer perfectly straight so that we don’t need to compensate for the angle of the module. Then we can look at only the x and y values and use our knowledge of the trigonometric functions to calculate our current heading.
+To make it as simple as possible let’s assume that we’re holding our magnetometer perfectly straight so that we don’t need to compensate for the angle of the module. Then we can look at only the x and y values and use our knowledge of the trigonometric functions to calculate our current heading.
 
 Now let’s use our x- and y-axis to create an imaginary triangle:
 
 ![](https://di2hdke024x80.cloudfront.net/tutorials/ShowMyHeading/Images/arctanTriangle.png)
 
-If we could only calculate the angleθ we would get our current heading. Luckily the arctangent function is the right tool for that! So using the arctangent funcion with the x- and y-axis we will get this:
+If we could only calculate the angle θ we would get our current heading. Luckily the arctangent function is the right tool for that! So using the arctangent funcion with the x- and y-axis we will get this:
 
 ![](https://di2hdke024x80.cloudfront.net/images/quicklatex_com-2cd2248b5cf230d5bcb349b7bca0gsa.png)
 
@@ -64,7 +64,7 @@ For the basic application we aim to create within this tutorial this is all we n
 
 For this tutorial I will be using the FreeSoC2 board but you should be able to follow along just fine with most other PSoC dev kit. What’s most important is that you’ve got the same compass module as me.
 
-The LSM303 breakout module have 8 pins. Though we will only need to use four of them. Two for power and two for the I2C interface. Which pins on your PSoC board you use for the I2C connection does not matter very much as you can use most of the GPIO-pins on PSoC devices for almost any purpose. For now I’ll be using P12[0] for SCL and P12[1] for SDA. Vin on the LSM303 you’ll need to connect a voltage supply between 3 – 5 V. And GNDgoes to ground as you probably already knew.
+The LSM303 breakout module have 8 pins. Though we will only need to use four of them. Two for power and two for the I2C interface. Which pins on your PSoC board you use for the I2C connection does not matter very much as you can use most of the GPIO-pins on PSoC devices for almost any purpose. For now I’ll be using P12[0] for SCL and P12[1] for SDA. Vin on the LSM303 you’ll need to connect a voltage supply between 3 – 5 V. And GND goes to ground as you probably already knew.
 
 ![](https://s3-eu-west-1.amazonaws.com/jimmyutterstrom.com/tutorials/ShowMyHeading/Images/LSM303_Connection.png)
 
@@ -102,7 +102,7 @@ We will then define some constants for our project where we will store the addre
 #define LSM303_REGISTER_ACCEL_OUT_X_L_A 0x28
 ```
 
-Now when we got our constants wecanstart communicating with the LSM303 module. To do this we’ll first need to send a number of instructions through our I2C interface for enabling the accelerometer (although we will only be working with the magnetometer data in this tutorial) and magnetometer.
+Now when we got our constants we can start communicating with the LSM303 module. To do this we’ll first need to send a number of instructions through our I2C interface for enabling the accelerometer (although we will only be working with the magnetometer data in this tutorial) and magnetometer.
 
 This is done by first sending a start command with the “LSM303_I2C_MasterSendStart()” function. This will initialize our communication session and we are then ready to send the data instructions. Before I continue I want to emphasize the fact that there are more then just one way of communicating through I2C in PSoC. In this case I’m only using what I think are the most basic functions:
 
@@ -113,7 +113,7 @@ This is done by first sending a start command with the “LSM303_I2C_MasterSendS
 
 This is to more clearly show what’s going on. Though there are other functions like for example MasterWriteBuf() and MasterReadBuf() that allows you to read/write more than just one byte of data. If you look at the documentation for the I2C component in PSoC creator you will find information for all available functions.
 
-We will begin by creating the function “LSM303_init”for initializing/starting the module. Here we’ll configure a couple of registers so that the LSM303 module will work and behave in a correct way.
+We will begin by creating the function “LSM303_init” for initializing/starting the module. Here we’ll configure a couple of registers so that the LSM303 module will work and behave in a correct way.
 
 ```C
 void LSM303_Init() {
@@ -144,7 +144,7 @@ void LSM303_Init() {
 }
 ```
 
-Now after the module has been initialized we can go ahead with retrieving the output from the magnetometer.As we know that the magnetometer outputs data for the x, y and z axis it would be comfortable to store all three readings at the same place. Therefore I will create a struct and call it “Vector3”: `typedef struct Vector3 { int x; int y; int z; } Vector3;`
+Now after the module has been initialized we can go ahead with retrieving the output from the magnetometer. As we know that the magnetometer outputs data for the x, y and z axis it would be comfortable to store all three readings at the same place. Therefore I will create a struct and call it “Vector3”: `typedef struct Vector3 { int x; int y; int z; } Vector3;`
 
 Next we will implement a function for reading the magnetometer data from the LSM303. We will call this function LSM303_ReadMag and its implementation is shown below. There are many comments so I think you should be able to follow what’s happening.
 
@@ -227,7 +227,7 @@ int main()
 }
 ```
 
-Don’t forget to include the stdio lib for the sprintf function.
+Don’t forget to include the stdio lib for the sprintf function.
 
 ## Step 4. Run it!
 

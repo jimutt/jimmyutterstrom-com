@@ -7,9 +7,9 @@ metaDescription: null
 metaTitle: null
 ---
 
-If you’re starting out with the FreeSoc 2 and you’re ready to leave the world of blinking LEDs to start working on more advanced projects you will quite often need to output data from the board to the computer for debug purposesor you’ll maybe want to send instructions to the PSoC boardfrom your PC.
+If you’re starting out with the FreeSoc 2 and you’re ready to leave the world of blinking LEDs to start working on more advanced projects you will quite often need to output data from the board to the computer for debug purposesor you’ll maybe want to send instructions to the PSoC board from your PC.
 
-There are actually more than one way of doing this. Either you can implement the serial communication functionality by using the “USBUART” component in PSoC Creator or you could use a standard UART-module. For most projects it doesn’t matter thatmuch which one you choose. But if you go with the “USBUART” component you will need to change some internal clock settings on the FreeSoC board as well as you’ll need to make sure you’re using the right signal levels. Therefore I think that the easiest and most straight-forward way for someone who is very new to PSoC is to use the standard UART component and as you will most likely use itin future projects it will probably be good to know how it works.
+There are actually more than one way of doing this. Either you can implement the serial communication functionality by using the “USBUART” component in PSoC Creator or you could use a standard UART-module. For most projects it doesn’t matter that much which one you choose. But if you go with the “USBUART” component you will need to change some internal clock settings on the FreeSoC board as well as you’ll need to make sure you’re using the right signal levels. Therefore I think that the easiest and most straight-forward way for someone who is very new to PSoC is to use the standard UART component and as you will most likely use it in future projects it will probably be good to know how it works.
 
 In this tutorial you will learn how to create a simple application for the FreeSoC2 board which echoes serial input from a PC back to the computer.
 
@@ -25,7 +25,7 @@ Next make sure you’re looking at “TopDesign.cysch”. If not open the file f
 
 [![c2](https://jimmyutterstrom.com/wp-content/uploads/2015/07/c2.jpg)](http://jimmyutterstrom.com/wp-content/uploads/2015/07/c4.jpg)
 
-For this project we are going to use the “UART [v2.30]” module (the version numbermight differ depending on which version of the component you have). Drag the UART component to the top design window and then double click it to view the settings. Here we’ll leave most fields withthe default settings to keep it as simple as possible but we choose to lower the baud rate from 57600 to 9600. Your UART module’s settings should now look like this:
+For this project we are going to use the “UART [v2.30]” module (the version number might differ depending on which version of the component you have). Drag the UART component to the top design window and then double click it to view the settings. Here we’ll leave most fields with the default settings to keep it as simple as possible but we choose to lower the baud rate from 57600 to 9600. Your UART module’s settings should now look like this:
 
 [![c3](https://jimmyutterstrom.com/wp-content/uploads/2015/07/c31.jpg)](http://jimmyutterstrom.com/wp-content/uploads/2015/07/c4.jpg)
 
@@ -33,9 +33,9 @@ Now we are done working in the top view. Next we’ll make the physical connecti
 
 **Step 3. Physical connections**
 
-The UART module we just added is typically used to achieve a serial communication link using some of the GPIO pins. In this case we want to be able to transfer our data through the USB interface to our PC to avoid the need of any additional cables and equipment. This can be achieved by connecting the pins (we will later route thepins to the UART module in PSoC Creator) of our newly created UART module to the RX and TX pins of the programmer/debugger circuit.
+The UART module we just added is typically used to achieve a serial communication link using some of the GPIO pins. In this case we want to be able to transfer our data through the USB interface to our PC to avoid the need of any additional cables and equipment. This can be achieved by connecting the pins (we will later route the pins to the UART module in PSoC Creator) of our newly created UART module to the RX and TX pins of the programmer/debugger circuit.
 
-We’ll choose to use pin P2.0for RX and P2.1 for TX. Then we connect the two pins to RX/TXpins on the debugger/programmer which is 12.6 (RX) and 12.7 (TX). Note that the RX pin from the PSoC 5LP MCU should be connected to the **TX** pin of the debugger. And the P2.1 TX pin should be connected to the debugger’s **RX** pin (12.6). As shown in the image below (click to enlarge):
+We’ll choose to use pin P2.0 for RX and P2.1 for TX. Then we connect the two pins to RX/TX pins on the debugger/programmer which is 12.6 (RX) and 12.7 (TX). Note that the RX pin from the PSoC 5LP MCU should be connected to the **TX** pin of the debugger. And the P2.1 TX pin should be connected to the debugger’s **RX** pin (12.6). As shown in the image below (click to enlarge):
 
 [![c4](https://jimmyutterstrom.com/wp-content/uploads/2015/07/c4-1024x575.jpg)](http://jimmyutterstrom.com/wp-content/uploads/2015/07/c5.jpg)
 
@@ -63,7 +63,7 @@ Okay, so now the uart component is initiated. To keep it simple but still verify
 
 See the comments in the above code to understand what is going on. Now we’re ready to test our little application! Make sure your board is connected and selected (Debug > Select debug target) and then build and program the application (Ctrl+F5 or Build > Program).
 
-**Step 6. Checkif it works!**
+**Step 6. Check if it works!**
 
 Now start your favourite terminal software (I’ll use Putty this time) and connect to the FreeSoC2. If you’re uncertain of which COM port to use open “Device Manager” and display the “Ports (COM & LPT)” list. There you will most likely see a “KitProg USB-UART” device. That’s the one to use!
 
@@ -77,4 +77,4 @@ Next click “Open” and you should see a blank terminal. If you then write som
 
 [![](https://jimmyutterstrom.com/wp-content/uploads/2015/07/m1.gif)](http://jimmyutterstrom.com/wp-content/uploads/2015/07/m1.gif)
 
-Well that’s it! This is one method you can use to achieve a serial communication link between your FreeSoC2 board and your PC. Later I might maybedemonstratehow to use the USBUART component as well.
+Well that’s it! This is one method you can use to achieve a serial communication link between your FreeSoC2 board and your PC. Later I might maybe demonstrate how to use the USBUART component as well.

@@ -11,13 +11,13 @@ Read the introduction to my home automation project here if you haven’t alread
 
 The foundation of the home automation system is the MQTT communication interface. As all connected devices will communicate through the MQTT broker (which I will try to cover later). Though most of the automation logic which control when devices should be switched on and off will be contained in the main server. Mainly to make the firmware development for the different devices easier by not needing to handle all the different on/off conditions etc. directly on the peripherals.
 
-That is why the web control panel is one of the most important and fundamental parts for controlling the system. For being able to very easily test the functionality of future devices I’ve decided to first implement the control panel and API backend. To store device information, switch conditions for devices etc. we’ll of course need an underlying database in which we can storeall the data we’ll need to make it all work. Initially I’ll be using a SQL LocalDB instance but later on I might switch to a more suitable database engine for the target server.
+That is why the web control panel is one of the most important and fundamental parts for controlling the system. For being able to very easily test the functionality of future devices I’ve decided to first implement the control panel and API backend. To store device information, switch conditions for devices etc. we’ll of course need an underlying database in which we can store all the data we’ll need to make it all work. Initially I’ll be using a SQL LocalDB instance but later on I might switch to a more suitable database engine for the target server.
 
-Well, what do we need to store then? First of all we want to be able to store information for the different type of devices the system will feature. I’ve decided to support the device types listed below. If you’refamiliar withthe specs for the Z-wave protocol you might notice that it has been a source of inspiration for me.
+Well, what do we need to store then? First of all we want to be able to store information for the different type of devices the system will feature. I’ve decided to support the device types listed below. If you’re familiar with the specs for the Z-wave protocol you might notice that it has been a source of inspiration for me.
 
 **Inputs (sensors):**  
 **Binary** – Simple “on or off” sensor which can only have a value of 0 or 1.  
-**Multilevel** – Can have avarying value andcan choose from many different data types. It can for example send a float with a temperature reading or just a simple 8 bit integer. Though the data type and data unit (degrees celsius, voltage, percentage etc) needs to be specified in the data package when sending data to the broker.
+**Multilevel** – Can have a varying value and can choose from many different data types. It can for example send a float with a temperature reading or just a simple 8 bit integer. Though the data type and data unit (degrees celsius, voltage, percentage etc) needs to be specified in the data package when sending data to the broker.
 
 **Outputs:**  
 **Binary** – Simple “on or off” switch. Replaces a normal mechanical switch. Can control lights, radiators etc.  

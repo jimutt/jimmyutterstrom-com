@@ -9,7 +9,7 @@ metaTitle: null
 
 It’s been pretty quite here for a while now. The main reason is the fact that I’ve begun studying again after the summer break. I haven’t made much progress on the NavBox project, just some minor work with the data transfer. My primary goal was to have a first prototype ready in October. To be honest I’m not sure I will make it but there’s really not that much left. So if I manage to dedicate a bit more time for the project I could probably keep to my original deadline. Though I’m also working on a couple of other smaller projects right now so it all depends on my prioritization.
 
-At the university we’ve recently been constructing a remote controlled vehicle. Both the vehicle and the remote is powered by an ATmega328P. There’s two customH-bridges for controlling the motors, and an IR sensor for displaying the distance to an obstacle and a nRF401 radio module.
+At the university we’ve recently been constructing a remote controlled vehicle. Both the vehicle and the remote is powered by an ATmega328P. There’s two custom H-bridges for controlling the motors, and an IR sensor for displaying the distance to an obstacle and a nRF401 radio module.
 
 ![Remote control](https://di2hdke024x80.cloudfront.net/images/WP_20150925_003.jpg)
 

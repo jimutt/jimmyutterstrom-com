@@ -1,9 +1,11 @@
 <template>
   <Layout>
     <article class="post">
-      <h1>{{$page.post.title}}</h1>
-      <span class="post-summary__date">{{toDateString($page.post.date)}}</span>
-      <p v-html="$page.post.content"></p>
+      <h1>{{ $page.post.title }}</h1>
+      <span class="post-summary__date">{{
+        toDateString($page.post.date)
+      }}</span>
+      <div v-html="$page.post.content"></div>
     </article>
   </Layout>
 </template>
@@ -23,11 +25,11 @@ export default {
   methods: {
     toDateString(date) {
       let options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
+        year: "numeric",
+        month: "long",
+        day: "numeric"
       };
-      return new Date(date).toLocaleString('en-us', options);
+      return new Date(date).toLocaleString("en-us", options);
     }
   },
   metaInfo() {
