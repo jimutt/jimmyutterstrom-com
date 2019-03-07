@@ -1,8 +1,7 @@
 <template>
   <Layout>
-    <!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
     <h1>Blog</h1>
-    <PostListing :posts="$page.allPost.edges"/>
+    <PostListing :posts="$page.allPost.edges" />
     <CustomPager
       :info="$page.allPost.pageInfo"
       :showLinks="true"

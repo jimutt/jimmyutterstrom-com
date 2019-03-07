@@ -90,7 +90,7 @@ export default {
 
   &__date {
     font-style: italic;
-    color: #777;
+    color: #555;
     font-size: 0.9rem;
   }
 

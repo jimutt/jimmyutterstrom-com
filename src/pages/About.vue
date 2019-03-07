@@ -15,7 +15,12 @@
       <br />Email: jimmy@utterstrom.xyz <br />Twitter:
       <a href="https://twitter.com/jimutt">https://twitter.com/jimutt</a>
     </p>
-    <g-image src="~/images/jimmy.jpg" class="avatar-image" :immediate="true" />
+    <g-image
+      src="~/images/jimmy.jpg"
+      alt="Jimmy Utterström"
+      class="avatar-image"
+      :immediate="true"
+    />
   </Layout>
 </template>
 

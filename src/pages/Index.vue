@@ -4,6 +4,7 @@
       <g-image
         src="~/images/jimmy.jpg"
         class="avatar-image"
+        alt="Jimmy Utterström"
         :immediate="true"
       />
       <p>
@@ -11,8 +12,8 @@
         singing, web development, embedded systems and tea!
       </p>
       <p>
-        Scroll down to read my latest blog posts or
-        <g-link to="/about">click here</g-link> for more information about me.
+        Scroll down to read my latest blog posts or visit the
+        <g-link to="/about">about page</g-link> for more information about me.
       </p>
     </div>
     <h1>Blog</h1>
