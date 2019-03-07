@@ -9,6 +9,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.0",
     "gridsome": "^0.5.4",
     "snyk": "^1.135.1"
   },

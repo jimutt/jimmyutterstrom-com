@@ -21,6 +21,12 @@ module.exports = {
           plugins: ['@gridsome/remark-prismjs']
         }
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-97413735-1'
+      }
     }
   ]
 };
