@@ -17,10 +17,6 @@
       </p>
     </div>
     <h1>Blog</h1>
-    <p class="blog-disclaimer">
-      Since I started working there haven't been much activity around here
-      unfortunately... But who knows, one day that might change!
-    </p>
     <PostListing :posts="$page.allPost.edges" />
     <g-link class="pagination__link-older" to="/blog/2">Older posts →</g-link>
   </Layout>
