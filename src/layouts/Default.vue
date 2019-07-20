@@ -5,12 +5,16 @@
         <strong>Jimmy Utterström</strong>
       </g-link>
       <nav class="nav">
-        <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
-        <g-link class="nav__link" :to="{ name: 'blog' }">Blog</g-link>
-        <g-link class="nav__link" :to="{ name: 'about' }">About</g-link>
+        <g-link class="nav__link" to="/">Home</g-link>
+        <g-link class="nav__link" to="/blog">Blog</g-link>
+        <g-link class="nav__link" to="/about">About</g-link>
       </nav>
     </header>
-    <slot />
+    <transition name="fade" appear>
+      <main>
+        <slot />
+      </main>
+    </transition>
   </div>
 </template>
 
@@ -135,5 +139,13 @@ blockquote {
 
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;
+}
+
+.fade-enter-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 </style>

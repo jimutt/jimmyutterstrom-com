@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "gridsome": "^0.5.4",
+    "gridsome": "^0.6.6",
     "snyk": "^1.135.1"
   },
   "devDependencies": {
-    "@gridsome/remark-prismjs": "0.0.4",
-    "@gridsome/source-filesystem": "0.3.0",
-    "@gridsome/transformer-remark": "0.2.1",
+    "@gridsome/remark-prismjs": "0.1.0",
+    "@gridsome/source-filesystem": "0.5.0",
+    "@gridsome/transformer-remark": "0.3.2",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
   },
