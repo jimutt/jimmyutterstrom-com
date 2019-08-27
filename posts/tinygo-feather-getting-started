@@ -1,7 +1,7 @@
 ---
 title: How to write Go code and make it run on Adafruit Feather or Arduino
 status: published
-date: '2019-08-27T12:00:00.000Z'
+date: '2019-08-27T12:02:00.000Z'
 slug: tinygo-adafruit-feather-getting-started
 metaDescription: Getting started with TinyGo - a Go compiler for microcontrollers.
 metaTitle: How to write Go code and make it run on Adafruit Feather or Arduino
