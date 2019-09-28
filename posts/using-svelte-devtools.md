@@ -1,10 +1,11 @@
 ---
 title: Debugging Svelte apps with the newly released Svelte Devtools
-published: true
-date: '2019-09-28T15:31:00.000Z'
 slug: using-svelte-devtools
+status: published
+date: '2019-09-28T15:31:00.000Z'
 metaDescription: The community created Svelte devtools extension allows you to easily inspect and update components from within the browser.
 metaTitle: Debugging Svelte apps with the newly released Svelte Devtools
+tags: Svelte, Javascript, debugging
 ---
 
 A minor nuisance with using Svelte 3 (if you're coming from Vue or React) might be the lack of a browser plugin like Vue devtools, it offers convenient ways to inspect the app's component tree and direct access to component state. 
