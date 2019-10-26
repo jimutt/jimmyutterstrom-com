@@ -3,9 +3,10 @@
     <h1>About me</h1>
 
     <p>
-      Jimmy Utterström is a Swedish software developer. After finishing his
-      education in electronics and computer technology at Umeå University he
-      started working with full stack web development in the energy industry.
+      Jimmy Utterström is a Swedish software developer. He is currently working with full stack
+      web development at <a href="http://storytel.com">Storytel</a>. Before his position at
+      Storytel Jimmy worked with full stack development in the energy sector. He has a bachelor degree
+      in electronics engineering / embedded systems from the University of Umeå. 
       This blog is mainly dedicated to his personal projects in electronics and
       programming.
     </p>
