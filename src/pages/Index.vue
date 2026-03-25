@@ -8,8 +8,8 @@
         :immediate="true"
       />
       <p>
-        Welcome to the personal site of a Swedish developer with a passion for
-        singing, web development, embedded systems and tea!
+        Welcome to the personal site of a Swedish software engineer with a passion for
+        web development, embedded systems, birding and folk music!
       </p>
       <p>
         Scroll down to read my latest blog posts or visit the
