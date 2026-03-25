@@ -7,7 +7,7 @@ metaDescription: "DLD is an open source framework that links code directly to th
 metaTitle: "Decision-Linked Development: Giving AI agents the context they need to modify your code"
 ---
 
-_AI coding agents write code confidently, but they don't know why your code looks the way it does. DLD is an open source framework that links code directly to the decisions behind it, so agents read the reasoning before modifying anything. This post covers how I got there and what I've learned so far._
+_AI coding agents write code confidently, but they don't know why your code looks the way it does. DLD (https://github.com/jimutt/dld-kit) is an open source framework that links code directly to the decisions behind it, so agents read the reasoning before modifying anything. This post covers how I got there and what I've learned so far._
 
 ## Background
 
