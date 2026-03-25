@@ -18,6 +18,7 @@
     <p>
       <strong>Contact Details</strong>
       <br />Email: jimmy@utterstrom.xyz
+      <br />Bluesky: <a href="https://bsky.app/profile/jimmyutterstrom.com">@jimmyutterstrom.com</a>
     </p>
     <g-image
       src="~/images/jimmy.jpg"
