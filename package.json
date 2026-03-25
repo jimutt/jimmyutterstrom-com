@@ -4,14 +4,11 @@
   "scripts": {
     "build": "gridsome build && cp _redirects dist/_redirects",
     "develop": "gridsome develop",
-    "explore": "gridsome explore",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "explore": "gridsome explore"
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "gridsome": "^0.6.6",
-    "snyk": "^1.135.1"
+    "gridsome": "^0.6.6"
   },
   "devDependencies": {
     "@gridsome/remark-prismjs": "0.1.0",
@@ -19,6 +16,5 @@
     "@gridsome/transformer-remark": "0.3.2",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
-  },
-  "snyk": true
+  }
 }
