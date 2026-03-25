@@ -55,7 +55,7 @@ The framework is used through a set of slash commands. A typical workflow for a 
 
 For smaller, isolated changes like a bugfix or a single design choice, `/dld-decide` records one decision directly without the planning step.
 
-![Diagram showing the core workflow described above](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v7uxwc79xn09wwlm5yrv.png)
+[![Diagram showing the core workflow described above](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v7uxwc79xn09wwlm5yrv.png)](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/v7uxwc79xn09wwlm5yrv.png)
 
 A decision record is a markdown file with YAML frontmatter. Here's a real one from my bird recording project:
 
@@ -124,7 +124,7 @@ There's also a passive mode for teams that want living documentation without cha
 
 I've been using DLD on my personal side project, Gillerkvitter, an off-grid bird song recording station running on a solar-powered Raspberry Pi in northern Sweden. It records bird songs, runs them through BirdNET for species identification, and syncs the detections to a cloud server with a web dashboard. The system spans hardware, embedded software, a Bun.js backend API, PostgreSQL, and an Astro/Svelte frontend. Quite a few moving parts.
 
-![System overview diagram of the main Gillerkvitter components](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/scmotiplxl1e27wipwso.png)
+[![System overview diagram of the main Gillerkvitter components](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/scmotiplxl1e27wipwso.png)](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/scmotiplxl1e27wipwso.png)
 
 The project now has 99 accepted decisions in its log, and so far it's been a really encouraging test case for the framework. The added documentation has really helped both me and the coding agents to easily pick up from a previous session and not lose track of how things are connected. It's the kind of broad, multi-domain project where you can go weeks without touching a particular subsystem, and when you come back, the decision log tells you exactly why things look the way they do.
 

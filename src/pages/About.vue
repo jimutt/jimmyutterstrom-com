@@ -3,18 +3,21 @@
     <h1>About me</h1>
 
     <p>
-      Jimmy Utterström is a Swedish software developer. He is currently working with full stack
-      web development at <a href="http://storytel.com">Storytel</a>. Before his position at
-      Storytel Jimmy worked with full stack development in the energy sector. He has a bachelor degree
-      in electronics engineering / embedded systems from the University of Umeå. 
+      Jimmy Utterström is a Swedish software developer working as a staff software engineer
+      at <a href="https://storytel.com">Storytel</a>. He has a bachelor's degree
+      in electronics engineering / embedded systems from the University of Umeå.
       This blog is mainly dedicated to his personal projects in electronics and
       programming.
     </p>
 
     <p>
+      Outside of work, Jimmy enjoys birding and bird photography, playing folk music,
+      and tinkering with side projects that tend to combine several of those interests.
+    </p>
+
+    <p>
       <strong>Contact Details</strong>
-      <br />Email: jimmy@utterstrom.xyz <br />Twitter:
-      <a href="https://twitter.com/jimutt">https://twitter.com/jimutt</a>
+      <br />Email: jimmy@utterstrom.xyz
     </p>
     <g-image
       src="~/images/jimmy.jpg"
