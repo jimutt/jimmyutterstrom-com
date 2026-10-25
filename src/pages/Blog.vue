@@ -24,7 +24,7 @@
       }
       edges {
         node {
-          _id
+          id
           title
           content 
           date

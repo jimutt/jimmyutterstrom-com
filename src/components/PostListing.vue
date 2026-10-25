@@ -1,6 +1,6 @@
 <template>
   <div class="post-listing">
-    <div v-for="post in orderedPosts" :key="post.node._id">
+    <div v-for="post in orderedPosts" :key="post.node.id">
       <g-link :to="post.node.path">
         <article class="post-summary">
           <h2 class="post-summary__link">
