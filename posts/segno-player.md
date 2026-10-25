@@ -1,10 +1,10 @@
 ---
-title: "Segno Player: a sheet music player that respects the original engraving"
+title: "Segno Player: a sheet music player that keeps the engraver's layout"
 slug: segno-player
 status: published
 date: '2026-10-25T12:00:00.000Z'
 metaDescription: "Segno Player is an open source web component that plays a score's own audio on its own engraved pages, following along bar by bar and note by note."
-metaTitle: "Segno Player: a sheet music player that respects the original engraving"
+metaTitle: "Segno Player: a sheet music player that keeps the engraver's layout"
 ---
 
 _Segno Player (https://github.com/segnomusic/segno-player) is an open source web component that plays a MuseScore score's audio on its original engraved pages, with a marker on the bar being played and a cursor that follows the notes. This post covers why I built it, how it works and where it's heading._
@@ -13,7 +13,7 @@ _Segno Player (https://github.com/segnomusic/segno-player) is an open source web
 
 ## Background
 
-I have a hobby, or a habit, that results in the collection of sheet music for old public domain songs, mostly Swedish folk music and choral music. Some of it does get sung or played, and quite a lot of it doesn't. I do however intend to transcribe the works and publish them for public access on the web. I host the Swedish website [frianoter.se](https://frianoter.se/) where some have been published already.
+I have a hobby, or possibly a problem, of collecting sheet music for old public domain songs, mostly Swedish folk music and choral music. Some of it does get sung or played, and quite a lot of it doesn't. I do however intend to transcribe the works and publish them for public access on the web. I host the Swedish website [frianoter.se](https://frianoter.se/) where some have been published already.
 
 To make the scores more accessible, I want them to be easy to view, play and download in any format. I'm very well aware of the immense library of digitalized sheet music on for example [musescore.com](https://musescore.com). But I don't like how almost all interactions with the community-contributed scores are blocked by paywalls nowadays. The open source engraving software ([musescore.org](https://musescore.org)) is however still a brilliant piece of software, and if I were to guess it will remain the most popular engraving software in the general community and in non-commercial environments.
 
