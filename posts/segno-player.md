@@ -1,10 +1,10 @@
 ---
-title: "Segno Player: a sheet music player that keeps the engraver's layout"
+title: "Segno Player: play along on the original score, on any screen"
 slug: segno-player
 status: published
 date: '2026-10-25T12:00:00.000Z'
 metaDescription: "Segno Player is an open source web component that plays a score's own audio on its own engraved pages, following along bar by bar and note by note."
-metaTitle: "Segno Player: a sheet music player that keeps the engraver's layout"
+metaTitle: "Segno Player: play along on the original score, on any screen"
 ---
 
 _Segno Player (https://github.com/segnomusic/segno-player) is an open source web component that plays a MuseScore score's audio on its original engraved pages, with a marker on the bar being played and a cursor that follows the notes. This post covers why I built it, how it works and where it's heading._
