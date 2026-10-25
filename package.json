@@ -14,7 +14,10 @@
     "@gridsome/remark-prismjs": "0.1.0",
     "@gridsome/source-filesystem": "0.5.0",
     "@gridsome/transformer-remark": "0.3.2",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0"
+    "sass": "^1.32.13",
+    "sass-loader": "^10.5.2"
+  },
+  "overrides": {
+    "sharp": "^0.33.5"
   }
 }
