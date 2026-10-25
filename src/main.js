@@ -7,6 +7,6 @@ export default function(Vue, { head }) {
   head.meta.push({
     name: 'description',
     content:
-      'The personal site of a Swedish developer with a passion for singing, web development, embedded systems and tea!'
+      'The personal site of a Swedish software engineer with a passion for web development, embedded systems, birding and folk music!'
   });
 }
