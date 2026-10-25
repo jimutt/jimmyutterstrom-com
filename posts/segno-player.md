@@ -37,7 +37,20 @@ Everything is technically there, and the renderer is doing what it's supposed to
 
 At its core, Segno Player is a layout-respecting sheet music player, allowing interactive playback of digital sheet music based on the original engraving. You press play, the audio starts, and a marker follows the current bar while a thin cursor flows from note to note. You can also click any bar to start playing from there.
 
-[![Segno Player showing the full score, with a bar marker and note cursor in the second system](/images/segno-player/full-score.png)](/images/segno-player/full-score.png)
+And this is the real thing, so go ahead and press play:
+
+<segno-player
+  style="display: block; width: 100%;"
+  pages="/scores/nar-juldagsmorgon-glimmar/nar-juldagsmorgon-glimmar-1.svg"
+  audio="/scores/nar-juldagsmorgon-glimmar/nar-juldagsmorgon-glimmar.mp3"
+  positions="/scores/nar-juldagsmorgon-glimmar/nar-juldagsmorgon-glimmar.mpos"
+  notes="/scores/nar-juldagsmorgon-glimmar/nar-juldagsmorgon-glimmar.spos"
+  alt="När juldagsmorgon glimmar"
+  controls>
+</segno-player>
+<noscript><img src="/images/segno-player/full-score.png" alt="Segno Player showing the full score, with a bar marker and note cursor in the second system"></noscript>
+
+<small>Engraving of <i>När juldagsmorgon glimmar</i> by <a href="https://frianoter.se/noter/nar-juldagsmorgon-glimmar/">Fria Noter</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small>
 
 The reason I'm accusing my Segno Player of being ambivalent is that it **does** offer some hybrid rendering modes that are meant to make scores more accessible on smaller screens. It offers these two additional display modes:
 
