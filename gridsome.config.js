@@ -1,5 +1,8 @@
 module.exports = {
   siteName: 'Jimmy Utterström',
+  templates: {
+    Post: '/blog/:year/:month/:day/:slug'
+  },
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -15,7 +18,6 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'posts/**/*.md',
-        route: '/blog/:year/:month/:day/:slug',
         typeName: 'Post',
         remark: {
           plugins: ['@gridsome/remark-prismjs']
