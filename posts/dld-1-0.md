@@ -9,11 +9,11 @@ metaTitle: "DLD Kit 1.0 is out"
 
 _DLD Kit 1.0 (https://github.com/jimutt/dld-kit) is released. This post is a short summary of what changed since the 0.x versions, mainly the move to an npm package._
 
-If you missed the [original post](/blog/2026/03/25/decision-linked-development), DLD (Decision-Linked Development) is a set of skills that make your coding agent record the decisions behind your code, and read them again before it changes anything. It's been about eight months since I started building it, and I've been using it on its own repo the whole time. There are 91 decision records in there now, so it has at least had a decent amount of testing.
+If you missed the [original post](/blog/2026/03/25/decision-linked-development), DLD (Decision-Linked Development) is a set of skills that make your coding agent record the decisions behind your code, and read them again before it changes anything. It's been about eight months since I started building it, and I've been using it on its own repo the whole time. There's 91 decision records in there now, so it has at least been tested a decent amount.
 
 ## From copied skills to an npm package
 
-Before 1.0 you installed DLD by copying a bunch of skills into your repo (or through Tessl), and each skill carried its own bash scripts. It worked, but it was a bit clumsy. Bash scripts that need to run on everything from Linux to Windows are not something I want to maintain either, and updating mostly came down to remembering to do it.
+Before 1.0 you installed DLD by copying a bunch of skills into your repo (or through Tessl), and each skill carried its own bash scripts. It worked, but it was a bit clumsy. Bash scripts that should run on everything from Linux to Windows is not something I want to maintain either, and updating mostly came down to remembering to do it.
 
 Now it's an npm package called `dld-kit`. In your repo, run:
 
@@ -29,7 +29,7 @@ If you're coming from 0.x, your decision records, config and index carry over un
 
 ## Other agents than Claude Code
 
-DLD started out as a Claude Code thing, but `init` now supports Claude Code, Codex, Cursor, OpenCode, Pi and Antigravity. There's also a Claude Code plugin and plugins for Codex and Copilot CLI, and if you already manage your skills with `npx skills` or `gh skill` it works with those too. The always-on rule is now installed in the file each agent actually loads, instead of being tacked on to the end of `CLAUDE.md`.
+DLD started out as a Claude Code thing, but `init` now supports Claude Code, Codex, Cursor, OpenCode, Pi and Antigravity. There's also a Claude Code plugin and plugins for Codex and Copilot CLI, and if you already manage your skills with `npx skills` or `gh skill` it works with those as well. The always-on rule is now installed in the file each agent actually loads, instead of being tacked on in the end of `CLAUDE.md`.
 
 ## What else is new
 
@@ -41,7 +41,7 @@ The biggest change is that decisions are drafts until they reach your main branc
 
 A couple of smaller things. `/dld-audit` now notices when a decision's text says it amends or supersedes another one but the link is missing from its metadata, and `/dld-reindex` commits the renames on top of your branch instead of squashing it, unless you ask for that.
 
-From 1.0 on the versions follow semver, for everything a project builds on: the record format, annotations, config files, commands and the installed layout. So an update shouldn't break your setup unless the major version changes.
+From 1.0 on the versions follow semver, for everything a project builds on: the record format, annotations, config files, commands and the installed layout. So an update should not break your setup, unless the major version is changed.
 
 ## Try it
 
