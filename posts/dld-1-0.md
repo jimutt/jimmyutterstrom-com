@@ -23,7 +23,7 @@ Now DLD is distributed as npm package called `dld-kit`. In your repo, run:
 npx dld-kit init
 ```
 
-It asks which agent harnesses your team uses, writes the config, the skills and a short always-on rule, and you commit the result. Teammates don't have to install anything. To upgrade later it's `npx dld-kit@latest update`. If you rather don't want to have the DLD "binary" (not really the correct term for an .mjs file) checked in to the repo, you can gitignore it and use `npx dld update` to bring it in locally. 
+It asks which agent harnesses your team uses, writes the config, the skills and a short always-on rule, and you commit the result. Teammates don't have to install anything. To upgrade later it's `npx dld-kit@latest update`. If you rather don't want to have the DLD "binary" (not really the correct term for an .mjs file) checked in to the repo, you can gitignore it and use `npx dld-kit@latest update` to bring it in locally. 
 
 The bash scripts are gone as well. The skills now call a small Node CLI that's bundled into them, so everything runs the same way on every platform. You need Node.js 22+ and git.
 
