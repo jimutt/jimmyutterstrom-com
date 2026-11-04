@@ -35,11 +35,11 @@ DLD started out as a Claude Code thing, but `init` now supports Claude Code, Cod
 
 ## What else is new
 
-- Decisions are drafts until they reach your main branch. After that the text is protected, and the agent has to record an amendment or a superseding decision instead of quietly rewriting history. `decision_edits` in the config decides how strict it is, and there's a command you can run in CI to enforce it.
+- Decisions are drafts until they reach your main branch, in the sense that the agent will be less reluctant than earlier to adjust prose in non-accepted decisions as long as they haven't been integrated yet (in line with the general philosophy of DLD). `decision_edits` in the config decides how strict it is, and there's a command you can run in CI to enforce it.
 
 - `/dld-snapshot` only generates `OVERVIEW.md` now, since the old `SNAPSHOT.md` turned out to be redundant. It was never well thought-through, and a number of end to end evaluations proved that it provided no measurable value for agents (contrary to `INDEX.md` and `OVERVIEW.md` which often improve agent decision recall & precision). You can still define your own generated documents in the config.
 
-`/dld-plan` can have a subagent review the decisions it wrote, and you can pick which model the reviewers run on. There's also a `dld.local.yaml` for settings that are just for you and shouldn't be committed.
+- `/dld-plan` can have a subagent review the decisions it wrote, and you can pick which model the reviewers run on. There's also a `dld.local.yaml` for settings that are just for you and shouldn't be committed. Subagent reviews for the `plan` step are disabled by default. Enable them by setting `plan_review: true`. 
 
 A couple of smaller things. `/dld-audit` now notices most cases when a decision's text says it amends or supersedes another one but the link is missing from its metadata, and `/dld-reindex` commits the renames on top of your branch instead of squashing it, unless you ask for that.
 
